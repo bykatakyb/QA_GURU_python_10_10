@@ -14,7 +14,7 @@ def test_filling_form():
     registration_page.fill_date_of_birth(year=1991, month=9, day=29)
     registration_page.fill_subject('Maths')
     registration_page.choose_hobbies('Reading')
-    registration_page.upload_picture('image.jpg') #'image/image.jpg'
+    registration_page.upload_picture('image.jpg')
     registration_page.fill_current_address('Javakhishvili St, 47, ap 39')
     registration_page.fill_state('NCR')
     registration_page.fill_city('Noida')
@@ -35,4 +35,3 @@ def test_filling_form():
         'NCR',
         'Noida',
     )
-

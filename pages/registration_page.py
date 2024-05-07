@@ -47,7 +47,6 @@ class RegistrationPage:
         browser.element('#currentAddress').should(be.blank).type(value)
 
     def fill_state(self, value):
-        # browser.element('#state').perform(command.js.scroll_into_view)
         browser.element('#state').click()
         browser.all("[id^='react-select-3-option']").element_by(have.exact_text(value)).click()
 
