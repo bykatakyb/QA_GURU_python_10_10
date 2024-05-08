@@ -1,6 +1,6 @@
-import os
-
 from selene import browser, be, have, command
+
+import resource
 
 
 class RegistrationPage:
@@ -41,7 +41,7 @@ class RegistrationPage:
             browser.all('[for^=hobbies-checkbox]').element_by(have.exact_text(hobby)).click()
 
     def upload_picture(self, value):
-        browser.element('#uploadPicture').send_keys(os.path.abspath('image/image.jpg'))
+        browser.element('#uploadPicture').send_keys(resource.path(value))
 
     def fill_current_address(self, value):
         browser.element('#currentAddress').should(be.blank).type(value)
